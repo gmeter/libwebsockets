@@ -987,6 +987,8 @@ lws_find_string_in_file(const char *filename, const char *string, int stringlen)
 {
 	char buf[128];
 	int fd, match = 0, pos = 0, n = 0, hit = 0;
+	
+	stringlen--; //Duncan
 
 	fd = lws_open(filename, O_RDONLY);
 	if (fd < 0) {
