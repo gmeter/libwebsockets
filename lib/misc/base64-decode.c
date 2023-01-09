@@ -215,7 +215,7 @@ _lws_b64_decode_string(const char *in, int in_len, char *out, size_t out_size)
 
 	if (in_len == -1){
 		il = strlen(in);
-		in_len = (int)il;
+		in_len = (int)il;  //Duncan
 	}
 
 	lws_b64_decode_state_init(&state);
